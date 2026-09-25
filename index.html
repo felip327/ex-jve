@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Demonstração dos Exercícios - Módulo 6</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 750px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1 { color: #1e3a8a; }
+    select, button {
+      padding: 10px 14px;
+      font-size: 15px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    .info {
+      background: #e0f2fe;
+      border-left: 4px solid #0284c7;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Gravação de Vídeo - Módulo 6</h1>
+    <p>Pressione <strong>F12</strong> para abrir as <strong>Ferramentas do Desenvolvedor (DevTools)</strong> antes de executar.</p>
+
+    <label for="scriptSelect"><strong>Escolha o exercício para demonstrar:</strong></label><br />
+    <select id="scriptSelect">
+      <option value="ex5.js">Exercício 5: Try...Catch Básico</option>
+      <option value="ex6.js">Exercício 6: Tratamento Condicional</option>
+      <option value="ex7.js">Exercício 7: Bloco Finally</option>
+      <option value="ex8.js">Exercício 8: Erros Customizados</option>
+      <option value="ex11.js" selected>Exercício 11: Uso do debugger (Pausa na aba Sources)</option>
+      <option value="ex12.js">Exercício 12: Step Over, Into e Out</option>
+    </select>
+    <br />
+    <button onclick="executarScript()">▶️ Executar Script Selecionado</button>
+
+    <div class="info">
+      <strong>Dica para o vídeo:</strong>
+      <ul>
+        <li>Para o <strong>Ex 11</strong>, o navegador vai pausar automaticamente na aba <em>Sources</em> assim que você clicar no botão.</li>
+        <li>Para o <strong>Ex 12</strong>, abra o arquivo <code>ex12.js</code> no DevTools, marque um breakpoint e demonstre o <em>Step Into</em>, <em>Step Out</em> e <em>Step Over</em>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function executarScript() {
+      const select = document.getElementById("scriptSelect");
+      const arquivo = select.value;
+      console.clear();
+      console.log("%cExecutando " + arquivo + "...", "color: #2563eb; font-weight: bold; font-size: 14px;");
+
+      const script = document.createElement("script");
+      script.src = arquivo + "?t=" + Date.now();
+      document.body.appendChild(script);
+    }
+  </script>
+</body>
+</html>
