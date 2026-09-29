@@ -1,16 +1,3 @@
-/**
- * EXERCÍCIO 12: Step Over, Step Into e Step Out
- * Módulo 6: Erros, Exceções e Depuração (JSE1)
- * 
- * [ROTEIRO PARA O VÍDEO]:
- * 1. Apresente as duas funções encadeadas: 'externo(n)' chama 'interno(n) + 1', e 'interno(m)' faz 'm * 3'.
- * 2. Demonstre os três botões principais de controle do fluxo no depurador:
- *    - Step Into (F11): "Mergulha" dentro da função chamada ('interno'). Mostre o depurador pulando de 'externo' para 'interno'.
- *    - Step Out (Shift + F11): "Sai" da função atual ('interno') e retorna o controle para a função chamadora ('externo').
- *    - Step Over (F10): Executa a linha inteira por cima sem entrar dentro de 'interno', indo direto para a linha seguinte.
- * 3. Mostre o resultado final: 4 * 3 = 12; 12 + 1 = 13.
- */
-
 console.log("=== Exercício 12: Step Over, Step Into e Step Out ===\n");
 
 function interno(m) {
@@ -22,7 +9,7 @@ function externo(n) {
 }
 
 const resultado = externo(4);
-console.log("Resultado da execução externo(4):", resultado); // (4 * 3) + 1 = 13
+console.log("Resultado da execução externo(4):", resultado);
 
 const explicacao = `
 DEMONSTRAÇÃO PRÁTICA DOS COMANDOS DE DEPURAÇÃO:
